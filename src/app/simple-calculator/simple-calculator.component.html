@@ -1,0 +1,17 @@
+<p>simple-calculator works!</p>
+
+
+<div>
+    <input [(ngModel)]="num1" type="number" placeholder="Angka 1" />
+    <input [(ngModel)]="num2" type="number" placeholder="Angka 2" />
+
+    <br>
+    <br>
+    
+    <button (click)="calculate('+')">+</button>
+    <button (click)="calculate('-')">-</button>
+    <button (click)="calculate('*')">x</button>
+    <button (click)="calculate('/')">:</button>
+
+    <h3>{{result}}</h3>
+</div>
