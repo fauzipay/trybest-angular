@@ -1,0 +1,9 @@
+<p>countdown-timer works!</p>
+
+<div>
+    <label>Masukkan Waktu (detik): </label>
+    <input type="number" [(ngModel)]="time">
+    <button (click)="startCountdown()">Mulai</button>
+
+    <h3>Waktu Tersisa: {{ remainingTime }}</h3>
+</div>
