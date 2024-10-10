@@ -1,0 +1,10 @@
+<p>counting-characters works!</p>
+
+<div>
+    <textarea [(ngModel)]="paragraph" placeholder="Masukkan paragraf"></textarea>
+    <br><br>
+    <button (click)="countCharacters()">Hitung Karakter</button>
+
+    <p>Jumlah Vokal: AIEUO {{ vowelCount }}</p>
+    <p>Jumlah Konsonan: {{ consonantCount }}</p>
+</div>

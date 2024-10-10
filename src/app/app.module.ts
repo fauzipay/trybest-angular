@@ -7,13 +7,15 @@ import { ClickCounterComponentComponent } from './click-counter-component/click-
 import { SimpleCalculatorComponent } from './simple-calculator/simple-calculator.component';
 import { FormsModule } from '@angular/forms';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import { CountingCharactersComponent } from './counting-characters/counting-characters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClickCounterComponentComponent,
     SimpleCalculatorComponent,
-    CountdownTimerComponent
+    CountdownTimerComponent,
+    CountingCharactersComponent
   ],
   imports: [
     BrowserModule,
