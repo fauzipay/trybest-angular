@@ -1,0 +1,33 @@
+<div class="json-placeholder">
+  <h2>Daftar Data</h2>
+
+  <label for="endpoints">Pilih Endpoint:</label>
+  <select id="endpoints" (change)="onEndpointChange($event)">
+    <option *ngFor="let endpoint of endpoints" [value]="endpoint.name">
+      {{ endpoint.name }}
+    </option>
+  </select>
+
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="searchPosts()"
+    placeholder="Cari berdasarkan judul..."
+  />
+
+  <div *ngIf="loading" class="loading">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <ul *ngIf="!loading && filteredPosts.length > 0">
+    <li *ngFor="let post of filteredPosts">
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.body }}</p>
+    </li>
+  </ul>
+
+  <ng-container *ngIf="!loading && filteredPosts.length === 0">
+    <p>Tidak ada hasil ditemukan.</p>
+  </ng-container>
+</div>
